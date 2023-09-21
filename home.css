@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    padding: 15px;
+}
+
+section {
+    padding: 20px;
+    width: 1280px;
+    margin: 40px auto;
+}
+
+section ul {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+section ul li {
+    list-style: none;
+    background: rgba(245, 241, 190, 0.753);
+    padding: 8px 20px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+section ul li.active {
+    background: rgb(1, 255, 213);
+    color: #fff;
+}
+
+.TitlePic {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.TitlePic .TPic {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+/* .TitlePic .Tpic {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 5px;
+} */
+
+#cashcounterText {
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+}
+
+#cashcounter {
+    display: none;
+    left: 100%;
+    margin-left: -300px;
+    width: 300px;
+    height: 270px;
+    border: 1px solid black;
+    position: fixed;
+    background-color: blanchedalmond;
+}
+
+#call_cashcounter {
+    left: 100%;
+    margin-left: -20px;
+    width: 20px;
+    border: 1px solid black;
+    position: fixed;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+#call_cart {
+    left: 0;
+    width: 20px;
+    border: 1px solid black;
+    position: fixed;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+#call_compare {
+    left: 90%;
+    width: 100px;
+    border: 1px solid black;
+    position: fixed;
+    background-color: blanchedalmond;
+    cursor: pointer;
+    top: 95%;
+    height: 30px;
+    text-align: center;
+}
+
+#call_compare:hover,
+#call_cashcounter:hover,
+#call_cart:hover {
+    background-color: black;
+    color: white;
+}
+
+#compare {
+    right: 0;
+    overflow: auto;
+    position: fixed;
+    height: 300px;
+    border: 1px solid white;
+    background-color: blanchedalmond;
+    display: none;
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 50%);
+    width: 500px;
+    bottom: 0;
+    padding: 25px;
+    overflow-y: hidden;
+}
+
+.compare_text {
+    text-align: left;
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: inline;
+    width: 270px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 6px;
+}
+
+#compare_reset {
+    position: fixed;
+    bottom: 265px;
+    right: 100px;
+    padding: 2px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#compare_close {
+    position: fixed;
+    bottom: 265px;
+    right: 0;
+    padding: 2px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#cashTotalText {
+    position: absolute;
+    top: 80px;
+    left: 76px;
+}
+
+#cashTotal {
+    position: absolute;
+    top: 80px;
+    left: 130px;
+    width: 100px;
+}
+
+#cashTimeText {
+    position: absolute;
+    left: 60px;
+    top: 110px;
+}
+
+#cashTime {
+    position: absolute;
+    top: 110px;
+    left: 130px;
+    width: 100px;
+}
+
+#cashcaculateText {
+    position: absolute;
+    left: 28px;
+    top: 140px;
+}
+
+#cashcaculate {
+    position: absolute;
+    left: 130px;
+    top: 140px;
+    width: 100px;
+}
+
+#cashStart {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -25px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0 10px 0px 10px;
+    cursor: pointer;
+}
+
+#cashCancel {
+    position: absolute;
+    top: 200px;
+    left: 70%;
+    margin-left: -25px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0 10px 0px 10px;
+    cursor: pointer;
+}
+
+#cashreset {
+    position: absolute;
+    top: 200px;
+    left: 30%;
+    margin-left: -25px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0 10px 0px 10px;
+    cursor: pointer;
+}
+
+#cashreset:hover,
+#cashStart:hover,
+#cashCancel:hover {
+    background-color: black;
+    color: white;
+}
+
+#GarageM1000RRText,
+#GarageR3Text,
+#GarageR1MText,
+#GarageZ1000Text,
+#GaragePanigaleV4RText,
+#GarageH2RText,
+#GarageFatBoyText,
+#GarageHayabusaText {
+    position: fixed;
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    background-color: blanchedalmond;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 8px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: left;
+    display: none;
+}
+
+.close {
+    left: 62%;
+    position: fixed;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#GarageR3Text::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+#GarageCbrText::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+#GarageR1MText::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+#GarageZ1000Text::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+#GarageR3Text::-webkit-scrollbar {
+    width: 6px;
+    background-color: black;
+}
+
+#GarageZ1000Text::-webkit-scrollbar {
+    width: 6px;
+    background-color: black;
+}
+
+#GarageCbrText::-webkit-scrollbar {
+    width: 6px;
+    background-color: black;
+}
+
+#GarageR1MText::-webkit-scrollbar {
+    width: 6px;
+    background-color: black;
+}
+
+#GarageR3Text::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+#GarageCbrText::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+#GarageR1MText::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+#GarageZ1000Text::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.home:hover {
+    animation-name: size;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes size {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.bike_item {
+    width: 240px !important;
+    margin: 10px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 220px;
+    padding: 8px;
+    border-radius: 10px;
+    float: left;
+}
+
+.item_img {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 3px;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.item_text {
+    width: 200px;
+    font-size: 20px;
+    padding: 5px;
+    text-align: justify;
+}
+
+.item_price {
+    font-size: 20px;
+    padding: 5px;
+    width: 100px;
+    float: left;
+}
+
+.item_cart {
+    width: 30px !important;
+    float: right;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+#cart {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    height: 300px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: blanchedalmond;
+    display: none;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.5);
+    width: 340px;
+    padding-top: 30px;
+}
+
+#cart_close {
+    position: fixed;
+    top: 125px;
+    left: 300px;
+    padding: 2px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#item_num {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    padding: 2px;
+    margin: 4px;
+}
+
+#item_money {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px;
+    margin: 4px;
+}
+
+#item_calculate {
+    position: fixed;
+    top: 380px;
+    left: 250px;
+    padding: 2px;
+    margin: 4px;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#item_calculate:hover {
+    color: white;
+    background-color: black;
+}
+
+.cart_item {
+    width: 360px;
+    overflow-y: auto;
+    margin: 3px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+}
+
+.cart_img {
+    width: 60px !important;
+    float: left;
+    margin-right: 10px;
+}
+
+.cart_delete {
+    float: left;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.cart_price {
+    width: 100px;
+    float: left;
+    letter-spacing: 2px;
+}

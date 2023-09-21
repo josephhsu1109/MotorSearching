@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歡迎</title>
+    <link href="test.css" rel="stylesheet">
+    <script src="_js/jquery.min.js"></script>
+    <script src="_js/jquery-ui.min.js"></script>
+    <script src="_js/vanilla-tilt.js"></script>
+</head>
+
+<script>
+    var use = true,
+        optionCount = 0,
+        i = 0,
+        j = 1;
+    var option = new Array();
+    var arr = new Array();
+    var img_Text = new Array();
+    var img_final = new Array();
+    arr = ["img/0.jpg", "img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.png", "img/5.png"];
+    img_Text = ["仿賽車", "街車", "YAMAHA", "HONDA", "KAWASAKI", "SUZUKI"];
+    option = ["option1", "option2", "option3"];
+    img_final = ["img/ans/0.jpg", "img/ans/1.jpeg", "img/ans/2.jpg", "img/ans/3.png", "img/ans/4.jpeg", "img/ans/5.jpeg", "img/ans/6.jpg", "img/ans/7.jpeg"];
+    var img_L = document.getElementById("left");
+    var img_R = document.getElementById("right");
+
+    $(document).ready(function() {
+        $('#logo').fadeIn(1500, btnStart);
+        $("#btnStart").click(function() {
+            $(".first").fadeOut(1000, function() {
+                $('.second').fadeIn(1500);
+            });
+        });
+
+        $('#left').click(function() {
+            if (use) {
+                option[optionCount] = false;
+                use = !use;
+                $('.left').animate({
+                    height: '1500px',
+                    speed: '300',
+                    easing: 'linear'
+                });
+                $('.right').hide(1000);
+                $('.left').delay(1300).hide(1000);
+                use = !use;
+                $('#btnNext').delay(1500).fadeIn(2500);
+            }
+
+
+
+        });
+        $('#right').click(function() {
+            if (use) {
+                option[optionCount] = true;
+                use = !use;
+                $('.right').animate({
+                    height: '1000px',
+                    speed: '300',
+                    easing: 'linear'
+                });
+                $(".left").hide(1000);
+                $('.right').delay(1300).hide(1000);
+                use = !use;
+                $('#btnNext').delay(1500).fadeIn(2500);
+            };
+        })
+
+        $('#btnNext').click(function() {
+            i += 2;
+            j += 2;
+            optionCount++;
+            if (i == 4) {
+                $(this).text("最後一題，按下即送出");
+
+            } else if (i >= 5) {
+                $(".second").fadeOut(1000);
+                $(".third").delay(500).fadeIn(1500);
+                judge();
+            }
+            $("#left").attr('src', arr[i]);
+            $("#right").attr('src', arr[j]);
+            $('#leftText').text(img_Text[i]);
+            $('#rightText').text(img_Text[j]);
+            $(".left").show(1300);
+            $(".right").show(1300);
+            $('#btnNext').fadeOut(200);
+            console.log(i, option);
+        });
+    });
+</script>
+
+<body>
+    <center>
+        <div class="first">
+            <div id="logo">
+                <img src="logo/logo.png" style="width: 600px; " alt="?_?">
+            </div>
+            <div id="btnStart">
+                <h1 style="padding:10px;">開始選擇你的騎乘習慣</h1>
+            </div>
+        </div>
+        <div class="second">
+            <h1 class="title" style="text-shadow:1px 1px 0 #444">選擇你最喜歡的選項，我們會推薦你最適合的車子</h1>
+
+            <h2 id="btnNext">繼續下一個</h2>
+
+            <div class="left">
+                <img id="left" src="img/0.jpg" alt="" width="60%">
+                <div class="leftText">
+                    <h2 style="text-shadow:1px 1px 0 #444" id="leftText">仿賽車</h2>
+                </div>
+            </div>
+
+            <div class="right">
+                <img id="right" src="img/1.jpg" alt="" width="60%">
+
+                <div class="rightText">
+                    <h2 style="text-shadow:1px 1px 0 #444" id="rightText">街車</h2>
+                </div>
+            </div>
+        </div>
+        <div class="third">
+            <h1>以下便是為您推薦的車款</h1>
+            <img id="left1" src="" alt="" width="60%">
+            <img id="right1" src="" alt="" width="60%">
+            <div>
+                <a href="home.html" id="btnBack">回到首頁</a>
+            </div>
+        </div>
+    </center>
+</body>
+
+<script>
+    function btnStart() {
+        $("#btnStart").fadeIn(500);
+        $("#btnStart").mouseover(function() {
+            $("#btnStart").css('background-color', 'argb(253, 232, 175)');
+        }).mouseout(function() {
+            $("#btnStart").css('background-color', 'argb(236, 178, 69)');
+        })
+    }
+    VanillaTilt.init(document.querySelector("#logo"), {
+        max: 10,
+        speed: 100
+    });
+    VanillaTilt.init(document.querySelector("#left"), {
+        max: 10,
+        speed: 100,
+    });
+    VanillaTilt.init(document.querySelector("#right"), {
+        max: 10,
+        speed: 100
+    });
+</script>
+
+<script>
+    function judge() {
+        if (option[0] == false) {
+            if (option[1] == false) {
+                if (option[2] == false) {
+                    $("#left1").attr('src', img_final[0]);
+                    $("#right1").attr('src', img_final[4]);
+                } else {
+                    $("#left1").attr('src', img_final[0]);
+                    $("#right1").attr('src', img_final[6]);
+                }
+            } else {
+                if (option[2] == false) {
+                    $("#left1").attr('src', img_final[2]);
+                    $("#right1").attr('src', img_final[4]);
+                } else {
+                    $("#left1").attr('src', img_final[2]);
+                    $("#right1").attr('src', img_final[6]);
+                }
+            }
+        } else {
+            if (option[1] == false) {
+                if (option[2] == false) {
+                    $("#left1").attr('src', img_final[1]);
+                    $("#right1").attr('src', img_final[5]);
+                } else {
+                    $("#left1").attr('src', img_final[1]);
+                    $("#right1").attr('src', img_final[7]);
+                }
+            } else {
+                if (option[2] == false) {
+                    $("#left1").attr('src', img_final[3]);
+                    $("#right1").attr('src', img_final[5]);
+                } else {
+                    $("#left1").attr('src', img_final[3]);
+                    $("#right1").attr('src', img_final[7]);
+                }
+            }
+        }
+    }
+</script>
+
+</html>

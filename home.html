@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="Option.css">
+    <script src="_js/myJs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        #send {
+            border: 1px solid blue;
+            cursor: pointer;
+            width: 40px;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 10px;
+            background-color: rgb(155, 143, 255);
+        }
+    </style>
+    <script>
+        send();
+        menuSwitch();
+        calculate();
+        _Option();
+        _compare();
+    </script>
+</head>
+
+<body>
+
+    <section>
+        <ul>
+            <li class="Titlelist active" data-filter="Home">首頁</li>
+            <li class="Titlelist" data-filter="Buymotor">購車</li>
+            <li class="Titlelist" data-filter="Garage">車庫</li>
+            <li class="Titlelist" data-filter="News">新聞</li>
+            <li class="Titlelist" data-filter="Option">選配</li>
+            <li class="Titlelist" data-filter="Contact">聯繫</li>
+        </ul>
+        <div class="TitlePic">
+
+            <div class="TPic Buymotor" id="BuymotorWH">
+                <div>
+                    <p>CB650F</p>
+                </div>
+                <a href="http://www.webike.tw/motomarket/detail/20210603D032292"><img src="Buy/CB650F.jpg" style="cursor:pointer"></a>
+            </div>
+            <div class="TPic Buymotor" id="BuymotorWH">
+                <div>
+                    <p>Yamaha MT07</p>
+                </div>
+                <a href="http://www.webike.tw/motomarket/detail/20210608D032414"><img src="Buy/mt07.jpg" style=" cursor:pointer"></a>
+            </div>
+            <div class="TPic Buymotor" id="BuymotorWH">
+                <div>
+                    <p>SUZUKI GSX-R1000</p>
+                </div>
+                <a href="http://www.webike.tw/motomarket/detail/20210608D032413"><img src="Buy/SUZUKI GSX-R1000.jpg" style="cursor:pointer"></a>
+            </div>
+            <div class="TPic Buymotor" id="BuymotorWH">
+                <div>
+                    <p>FZR150</p>
+                </div>
+                <a href="http://www.webike.tw/motomarket/detail/20210619D032711"><img src="Buy/FZR150.jpg" style="cursor:pointer"></a>
+            </div>
+            <div class="TPic Buymotor" id="BuymotorWH">
+                <div>
+                    <p>SUZUKI GSX-S750</p>
+                </div>
+                <a href="http://www.webike.tw/motomarket/detail/20210618D032703"><img src="Buy/SUZUKI GSX-S 750.jpg" style="height:299.86px;cursor:pointer"></a>
+            </div>
+            <div class="TPic Garage">
+                <p>Yamaha R1m</p>
+                <img src="PicforHome/Garage/yamaha r1m.jpg" id="R1M" class="home" style="cursor:pointer">
+            </div>
+            <div class="TPic Garage">
+                <p>kawasaki Z1000</p>
+                <img src="PicforHome/Garage/kawasaki z1000.jpg" id="Z1000" class="home" style="cursor:pointer">
+            </div>
+            <div class="TPic Garage">
+                <p>Harley FatBoy</p>
+                <img src="PicforHome/Garage/fatboy.jpg" id="FatBoy" class="home" style="cursor:pointer">
+            </div>
+            <div class="TPic Garage">
+                <p>Kawasaki H2R</p>
+                <img src="PicforHome/Garage/H2R.jpeg" id="H2R" class="home" style="cursor:pointer">
+            </div>
+            <div class="TPic Garage">
+                <p>Yamaha R3</p>
+                <img src="PicforHome/Garage/r3.png" id="GarageR3" class="home" style="cursor:pointer">
+            </div>
+            <div class="TPic Garage">
+                <p>BMW M1000RR</p>
+                <img src="PicforHome/Garage/M1000RR.jpg" id="M1000RR" class="home" style="cursor:pointer">
+            </div>
+            <div class="TPic Garage">
+                <p>Panigale V4R</p>
+                <img src="PicforHome/Garage/V4r.jpg" id="V4R" class="home" style="cursor:pointer">
+            </div>
+            <div class="TPic Garage">
+                <p>Suzuki Hayabusa</p>
+                <img src="PicforHome/Garage/Hayabusa.jpg" id="Hayabusa" class="home" style="cursor:pointer">
+            </div>
+            <div class="TPic News">
+                <a href="https://www.bikein-net.com/msg/msg966.html"><img src="PicforHome/News/DRGNewsIntro.jpg" class="home"></a>
+                <span id="firstNews" style="position:absolute;top:150px;left:30px; color: white;">[SYM BRGBT R-Edition
+                    全新進化上市!]</span>
+                <span id="firstNewsDate" style="position:absolute;top:200px; left:30px; color:white; font-size:18px;">2021-06-04</span>
+            </div>
+            <div class="TPic News">
+                <a href="https://www.bikein-net.com/msg/msg968.html"><img src="News/Nmax.jpg" class="home"></a>
+                <span id="firstNews" style="position:absolute;top:150px;left:30px; color: white;">水土不服 - YAMAHA NMAX 155</span>
+                <span id="firstNewsDate" style="position:absolute;top:200px; left:30px; color:white; font-size:18px;">2021-06-04</span>
+            </div>
+            <div class="TPic News">
+                <a href="https://www.bikein-net.com/msg/msg967.html"><img src="News/Maxxis r1n.jpg" class="home"></a>
+                <span id="firstNews" style="position:absolute;top:150px;left:30px; color: white;">有感升級 - MAXXIS R1N SPORT 輪胎測試</span>
+                <span id="firstNewsDate" style="position:absolute;top:200px; left:30px; color:white; font-size:18px;">2021-06-04</span>
+            </div>
+            <div class="TPic News">
+                <a href="https://www.bikein-net.com/msg/msg962.html"><img src="News/ducati.jpg" class="home"></a>
+                <span id="firstNews" style="position:absolute;top:150px;left:30px; color: white;">全台只有兩台 Ducati Diavel 1260 Lamborghini 低調在台亮相</span>
+                <span id="firstNewsDate" style="position:absolute;top:200px; left:30px; color:white; font-size:18px;">2021-06-04</span>
+            </div>
+            <div class="TPic News">
+                <a href="https://www.bikein-net.com/msg/msg80.html"><img src="News/KYT.jpg" class="home"></a>
+                <span id="firstNews" style="position:absolute;top:150px;left:30px; color: white;">夢想的旅程－KYT VENDTTA國旗帽</span>
+                <span id="firstNewsDate" style="position:absolute;top:200px; left:30px; color:white; font-size:18px;">2021-06-04</span>
+            </div>
+            <div class="TPic News">
+                <a href="https://www.bikein-net.com/msg/msg955.html"><img src="News/thepanamerica.jpg" class="home"></a>
+                <span id="firstNews" style="position:absolute;top:150px;left:30px; color: white;">哈雷即將開啟自由無畏與冒險探索的全新里程 The Pan America™ 搶先亮相</span>
+                <span id="firstNewsDate" style="position:absolute;top:200px; left:30px; color:white; font-size:18px;">2021-06-04</span>
+            </div>
+            <div class="TPic Option">
+
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/akaprovic0.jpg" alt="">
+                    <div class="item_text">akaprovic排氣管</div>
+                    <div class="item_price">$24000</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/akaprovic1.jpg" alt="">
+                    <div class="item_text">akaprovic排氣管2</div>
+                    <div class="item_price">$30000</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/astone0.jpg" alt="">
+                    <div class="item_text">astone手套</div>
+                    <div class="item_price">$8500</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/AGV0.jpg" alt="">
+                    <div class="item_text">AGV安全帽</div>
+                    <div class="item_price">$23000</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/SHOEI0.png" alt="">
+                    <div class="item_text">SHOEI安全帽</div>
+                    <div class="item_price">$22000</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/OZ0.jpg" alt="">
+                    <div class="item_text">OZ鍛框</div>
+                    <div class="item_price">$80000</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/brake0.jpg" alt="">
+                    <div class="item_text">剎車拉桿</div>
+                    <div class="item_price">$7000</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/TTX-GP0.jpg" alt="">
+                    <div class="item_text">OHLINS TTX-GP</div>
+                    <div class="item_price">$64000</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/brembo0.jpg" alt="">
+                    <div class="item_text">Brembo M50</div>
+                    <div class="item_price">$19000</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/wheel0.png" alt="">
+                    <div class="item_text">Diablo Rosso</div>
+                    <div class="item_price">$8800</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+            <div class="TPic Option">
+                <div class="bike_item">
+                    <img class="item_img" src="img/cart_img/quick0.jpg" alt="">
+                    <div class="item_text">快拆油箱蓋</div>
+                    <div class="item_price">$3500</div>
+                    <img class="item_cart" src="img/cart.png" />
+                </div>
+            </div>
+
+            <div class="TPic Contact"><img src="logo/logo.png" style="width: 300px; height: 300px;"></div>
+            <div class="TPic Contact">
+                <p style="font-size: 75px; color: black;">聯繫我們</p>
+                <input type="text" name="Yourname" id="Yourname" placeholder="全名" required>
+                <input type="email" name="Youremail" id="Youremail" placeholder="您的電子郵件" required>
+                <input type="number" name="YourphoneNum" id="YourphoneNum" placeholder="您的電話號碼">
+                <input type="text" name="Yourproblem" id="Yourproblem" placeholder="說明">
+                <div id="send">送出</div>
+                <h1>打電話聯絡我們</h1>
+                <p>0912345678</p>
+            </div>
+            <div id="call_cashcounter">分期計算機</div>
+            <div id="cashcounter">
+                <h1 id="cashcounterText">分期計算機</h1>
+                <span id="cashTotalText">總金額:</span>
+                <input type="number" id="cashTotal">
+                <span id="cashTimeText">分期期數:</span>
+                <input type="number" id="cashTime">
+                <span id="cashcaculateText">每期應繳金額:</span>
+                <input type="number" id="cashcaculate" readonly>
+                <div id="cashreset">重算</div>
+                <div id="cashStart">計算</div>
+                <div id="cashCancel">關閉</div>
+            </div>
+            <div id="call_cart">購物車</div>
+            <div id="cart">
+                <div id="item_calculate">分期計算</div>
+                <div id="item_money"></div>
+                <div id="item_num"></div>
+                <id id="cart_close">X</id>
+            </div>
+            <div id="call_compare">比較</div>
+            <div id="compare">
+                <div id="compare_reset">重設</div>
+                <div id="compare_close">X</div>
+            </div>
+        </div>
+        <div id="GarageText">
+            <div id="GarageR3Text">
+                <div id="R3Text">R3 售價:263000 全長(mm):2090 軸距(mm):1980 總排氣量:321cc 最高馬力:42ps/10,750rpm 最大扭力:3.0kg-m/9,000rpm 油箱容量:14L</div>
+            </div>
+        </div>
+        <div id="GarageText">
+            <div id="GarageR1MText">
+                <div id="R1MText">R1M 售價:1480000 全長(mm):2055 軸距(mm):1405 總排氣量:998cc 最高馬力:200ps/13500rpm 最大扭力:11.6kg-m/11500rpm 油箱容量:17公升</div>
+            </div>
+        </div>
+        <div id="GarageText">
+            <div id="GarageZ1000Text">
+                <div id="Z1000Text">Z1000 售價:498000 全長(mm):2045 軸距(mm):1435 總排氣量:1043cc 最高馬力:142ps/10,000rpm 最大扭力:11.3kg-m/7,300rpm 油箱容量:17公升</div>
+            </div>
+            <div id="GarageText">
+                <div id="GarageM1000RRText">
+                    <div id="M1000RRText">M1000RR 售價:1990000 全長(mm):2073 軸距(mm):1411 總排氣量:999cc 最高馬力:212ps/14500rpm 最大扭力:113Nm/11000rpm 油箱容量:16.5公升</div>
+                </div>
+            </div>
+            <div id="GarageText">
+                <div id="GaragePanigaleV4RText">
+                    <div id="PanigaleV4RText">PanigaleV4R 售價:2000000 全長(mm):2071 軸距(mm):1471 總排氣量:998cc 最高馬力:231ps/14500rpm 最大扭力:112Nm/11000rpm 油箱容量:17公升</div>
+                </div>
+            </div>
+            <div id="GarageText">
+                <div id="GarageH2RText">
+                    <div id="H2RText">H2R 售價:2480000 全長(mm):2070 軸距(mm):1450 總排氣量:998cc 最高馬力:310ps/14000rpm 最大扭力:13.6Kg-m/11000rpm 油箱容量:17公升</div>
+                </div>
+            </div>
+            <div id="GarageText">
+                <div id="GarageFatBoyText">
+                    <div id="FatBoyText">FatBoy 售價:1250000 全長(mm):2385 軸距(mm):1630 總排氣量:1584cc 最高馬力:67ps/5010rpm 最大扭力:11.9Kg-m/11000rpm 油箱容量:18.9公升</div>
+                </div>
+            </div>
+            <div id="GarageText">
+                <div id="GarageHayabusaText">
+                    <div id="HayabusaText">Hayabusa 售價:828000 全長(mm):2180 軸距(mm):1480 總排氣量:1340cc 最高馬力:190ps/5010rpm 最大扭力:15.29Kg-m/7000rpm 油箱容量:16公升</div>
+                </div>
+            </div>
+    </section>
+
+</body>
+
+</html>

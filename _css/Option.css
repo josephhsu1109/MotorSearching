@@ -1,0 +1,140 @@
+#banner {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid black;
+}
+
+#clothes_win {
+    width: 100%;
+    height: 600px;
+    /*border: 1px solid black;*/
+    margin-top: 10px;
+}
+
+#item_num {
+    float: right;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.8);
+    padding: 8px;
+    line-height: 20px;
+    color: white;
+}
+
+#banner img {
+    float: right;
+    width: 40px;
+    margin-right: 0px;
+}
+
+.clothes_img {
+    width: 200px;
+    margin: 3px;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.clothes_text {
+    width: 200px;
+    font-size: 20px;
+    padding: 5px;
+    text-align: justify;
+}
+
+.clothes_price {
+    font-size: 20px;
+    padding: 5px;
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+}
+
+.clothes_item {
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    width: 208px;
+    padding: 8px;
+    border-radius: 10px;
+    float: left;
+}
+
+.clothes_item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.clothes_cart {
+    width: 30px;
+    float: left;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.clothes_cart:hover {
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+#cart_win {
+    position: absolute;
+    top: 150px;
+    left: 280px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: blanchedalmond;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.5);
+    width: 360px;
+    padding-top: 30px;
+}
+
+#close {
+    position: absolute;
+    top: 0px;
+    left: 354px;
+    /* width: 360px; */
+    padding: 2px;
+    border: 1px solid gray;
+    margin: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart_item {
+    width: 360px;
+    overflow: auto;
+    margin: 3px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+}
+
+.cart_img {
+    width: 60px;
+    float: left;
+    margin-right: 10px;
+}
+
+.cart_text {
+    float: left;
+    width: 280px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.cart_price {
+    width: 100px;
+    float: left;
+    letter-spacing: 2px;
+}
+
+.cart_delete {
+    float: left;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.cart_delete:hover {
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 4px;
+}

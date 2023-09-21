@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightblue;
+}
+
+#btnStart {
+    width: 450px;
+    display: none;
+    margin: 0 40% 0 40%;
+    margin-top: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(236, 178, 69);
+}
+
+#btnBack {
+    font-size: 45px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(236, 178, 69);
+    text-decoration: none;
+    padding: 10px;
+}
+
+#btnNext {
+    box-shadow: 2px;
+    border: 1px solid rgb(0, 0, 0);
+    display: none;
+    margin: 500px 40% 0 40%;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(253, 232, 175);
+}
+
+#logo {
+    display: none;
+    padding-top: 5%;
+}
+
+.second {
+    display: none;
+    margin-top: 3%;
+}
+
+.third {
+    display: none;
+    margin-top: 3%;
+}
+
+.left {
+    margin: 10px;
+    margin-left: 17%;
+    /* overflow: auto; */
+    width: 600px;
+    padding: 8px;
+    border-radius: 5px;
+    float: left;
+}
+
+.right {
+    margin: 10px;
+    margin-right: 16%;
+    /* overflow: auto; */
+    width: 600px;
+    padding: 8px;
+    border-radius: 5px;
+    float: right;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.title2 {
+    font-size: 48px;
+    color: lemonchiffon;
+}
+
+
+/*img*/
+
+#left,
+#left1 {
+    cursor: pointer;
+    margin: 0 50px 0 50px;
+    width: 500px;
+    display: show;
+}
+
+
+/*img*/
+
+#right,
+#right1 {
+    cursor: pointer;
+    margin: 0 50px 0 50px;
+    width: 500px;
+    display: show;
+}
+
+.leftText,
+.rightText {
+    font-size: 20px;
+    text-align: center;
+}
+
+.imgtable {
+    margin-top: 50px;
+}
